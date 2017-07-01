@@ -23,25 +23,26 @@ Things you may want to cover:
 
 * ...
 
-
 ## users
 
 |Column|Type|Options|
 |------|----|-------|
-|id|integer|null: false, foreign_key: true|
+|id|integer|null: false|
 |user_id|integer|null: false, foreign_key: true|
-|email|string|null: false, foreign_key: true|
+|email|string|null: false|
 |password|integer|null: false, foreign_key: true|
 |name|string|null: false|
 
 ### Association
-- has_many : chattexts
-- belongs_to : group
+- has_many : chat_texts
+- has_many : groups
+- has_many : group_users
 
-## chattexts
+## chat_texts
 |Column|Type|Options|
 |------|----|-------|
-|id|integer|null: false, foreign_key: true|
+|id|integer|null: false|
+|group_id|integer|null: false, foreign_key: true|
 |text|text|null: false|
 |create_at|datetime|null: false|
 
@@ -53,13 +54,10 @@ Things you may want to cover:
 ## groups
 |Column|Type|Options|
 |------|----|-------|
-|user_id|integer|null: false, foreign_key: true|
-|group_id|integer|null: false, foreign_key: true|
 |name|string|null: false|
-|text|text|null: false|
 ## Association
-- has_many users
-- has_many chattexts
+- belongs_to : user
+- has_many : chat_texts
 
 ## group_users
 |Column|Type|Options|
@@ -67,11 +65,6 @@ Things you may want to cover:
 |group_id|integer|null: false, foreign_key: true|
 
 ## Association
-- berongs_to :user
-- berongs_to :group
-
-
-
-
-
+- berongs_to : user
+- berongs_to : group
 
