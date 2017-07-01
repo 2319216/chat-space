@@ -9,6 +9,7 @@
 
 ### Association
 - has_many : messages
+- has_many : group_users
 - has_many : groups, through: :group_users
 
 
@@ -17,8 +18,8 @@
 |------|----|-------|
 |group_id|references|null: false, foreign_key: true|
 |user_id|references|null: false, foreign_key: true|
-|text|text|null: false|
-|create_at|datetime|null: false|
+|text|text| |
+|image|string| |
 
 ## Association
 - belongs_to : user
@@ -28,12 +29,12 @@
 ## groups
 |Column|Type|Options|
 |------|----|-------|
-|name|string|add_index :users, :name, null: false, unique: true|
+|name|string|null: false|
 
 ## Association
-- has_many : users, through: :group_users
 - has_many : messages
 - has_many : group_users
+- has_many : users, through: :group_users
 
 
 ## group_users
