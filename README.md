@@ -23,6 +23,7 @@ Things you may want to cover:
 
 * ...
 
+
 ## users
 
 |Column|Type|Options|
@@ -68,6 +69,7 @@ Things you may want to cover:
 ## Association
 - berongs_to :user
 - berongs_to :group
+
 
 
 
