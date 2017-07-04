@@ -4,16 +4,7 @@
     .notification
       = render "layouts/top_message"
     .chat-side
-      .chat-side__user
-        .chat-side__user-content
-          .chat-side__user-name
-            sample
-          %p
-            <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
-            <i class="fa fa-cog" aria-hidden="true"></i>
-      .chat-side--groups
-        = render "layouts/chat-side__groups-list"
-
+      = render "layouts/user"
     .chat-main
       .chat-main__header
         .chat-main__header--group
