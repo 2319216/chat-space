@@ -20,12 +20,12 @@
           height: 40px;
           margin: 0 40px auto;
           padding: 0 20px;
-          border: 1px solid #38AEF0;
+          border: 1px solid $lightbluecolor;
           float: right;
           line-height: 40px;
           font-size: 15px;
-          color: #38AEF0;
-          background-color: #fff;
+          color: $lightbluecolor;
+          background-color: $whitecolor;
         }
         .chat-main__header-members{
             color: #999;
@@ -49,7 +49,7 @@
           font-size: 16px;
           font-weight: bold;
           float: left;
-          color: #434A54;
+          color: $navycolor;
         }
         .chat-main__message-time{
           padding: 0 10px 10px;
@@ -59,7 +59,7 @@
         }
         .chat-main__message-body{
           font-size: 14px;
-          color: #434A54;
+          color: $navycolor;
           clear: both;
         }
 
@@ -73,13 +73,13 @@
       height: 50px;
       width: calc(100% - 230px);
       float: left;
-      background-color: #fff;
+      background-color: $whitecolor;
       margin: 20px 0 20px 40px;
     }
       .chat-main__footer-image{
         float: right;
         margin: 20px 155px 20px 0;
-        background-color: #fff;
+        background-color: $whitecolor;
         height: 50px;
         width: 35px;
         line-height: 50px;
@@ -91,20 +91,20 @@
       .chat-main__footer-body input{
         height: 50px;
         width: 100%;
-        background-color: #fff;
+        background-color: $whitecolor;
         border: none;
         line-height: 50px;
         font-style: 16px;
-        color: #434A54;
+        color: $navycolor;
         position: relative;
       }
       .chat-main__footer-body-sentbtn input{
-        color: #fff;
+        color: $whitecolor;
         width: 100px;
         height: 50px;
         line-height: 50px;
         text-align: center;
-        background-color: #38AEF0;
+        background-color: $lightbluecolor;
         margin: 20px 40px;
         position: absolute;
         top: 0;

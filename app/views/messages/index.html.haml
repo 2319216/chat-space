@@ -2,7 +2,7 @@
 %html
   %body
     .notification
-      チャットグループが作成されました。
+      = render "layouts/top_message"
     .chat-side
       .chat-side__user
         .chat-side__user-content
@@ -12,32 +12,7 @@
             <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
             <i class="fa fa-cog" aria-hidden="true"></i>
       .chat-side--groups
-        .chat-side__groups-list
-          %li.chat-side__groupe
-            %p.chat-side__groupe-name
-              wwwwwwwwwwwww
-            %p.chat-side__groupe-message
-              oooooooooooooo
-          %li.chat-side__groupe
-            %p.chat-side__groupe-name
-              wwwwwwwwwwwww
-            %p.chat-side__groupe-message
-              oooooooooooooo
-          %li.chat-side__groupe
-            %p.chat-side__groupe-name
-              wwwwwwwwwwwww
-            %p.chat-side__groupe-message
-              oooooooooooooo
-          %li.chat-side__groupe
-            %p.chat-side__groupe-name
-              wwwwwwwwwwwww
-            %p.chat-side__groupe-message
-              oooooooooooooo
-          %li.chat-side__groupe
-            %p.chat-side__groupe-name
-              wwwwwwwwwwwww
-            %p.chat-side__groupe-message
-              oooooooooooooo
+        = render "layouts/chat-side__groups-list"
 
     .chat-main
       .chat-main__header
