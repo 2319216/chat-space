@@ -1,0 +1,114 @@
+.chat-main{
+  height: 100vh;
+  width: calc( 100vw - 300px );
+  float: left;
+  &__header{
+  height: 15%;
+  border: 1px solid #eeeeee;
+  }
+    &__header--group{
+    margin: 35px 0 15px 40px;
+    font-size: 20px;
+    font-weight: bold;
+  }
+      &__header--group-name{
+        color: #333333;
+        font-size: 20px;
+        float: left;
+      }
+        &__header--group-edit-btn input{
+          height: 40px;
+          margin: 0 40px auto;
+          padding: 0 20px;
+          border: 1px solid $lightbluecolor;
+          float: right;
+          line-height: 40px;
+          font-size: 15px;
+          color: $lightbluecolor;
+          background-color: $whitecolor;
+        }
+        &__header-members{
+            color: #999;
+            font-size: 12px;
+            margin: 0 40px;
+            clear: both;
+        }
+
+  &__body{
+    height: calc( 100vh - 15% - 90px );
+    overflow-y: scroll;
+  }
+    &__body--messages-list{
+      padding: 46px 0 40px 40px;
+      list-style: none;
+    }
+      &__message{
+        padding: 20px;
+      }
+        &__message-name{
+          font-size: 16px;
+          font-weight: bold;
+          float: left;
+          color: $navycolor;
+        }
+        &__message-time{
+          padding: 0 10px 10px;
+          font-size: 12px;
+          margin-left: 10px;
+          float: left;
+        }
+        &__message-body{
+          font-size: 14px;
+          color: $navycolor;
+          clear: both;
+        }
+
+  &__footer{
+    height: 90px;
+    width: 100%;
+    background-color: #B8C3C7;
+    position: relative;
+  }
+    &__footer-body{
+      height: 50px;
+      width: calc(100% - 230px);
+      float: left;
+      background-color: $whitecolor;
+      margin: 20px 0 20px 40px;
+    }
+      &__footer-image{
+        float: right;
+        margin: 20px 155px 20px 0;
+        background-color: $whitecolor;
+        height: 50px;
+        width: 35px;
+        line-height: 50px;
+      }
+        &__footer-image input{
+          line-height: 50px;
+          margin: 0 auto;
+        }
+      &__footer-body input{
+        height: 50px;
+        width: 100%;
+        background-color: $whitecolor;
+        border: none;
+        line-height: 50px;
+        font-style: 16px;
+        color: $navycolor;
+        position: relative;
+      }
+      &__footer-body-sentbtn input{
+        color: $whitecolor;
+        width: 100px;
+        height: 50px;
+        line-height: 50px;
+        text-align: center;
+        background-color: $lightbluecolor;
+        margin: 20px 40px;
+        position: absolute;
+        top: 0;
+        right: 0;
+        border: none;
+      }
+}
