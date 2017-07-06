@@ -29,10 +29,11 @@
         float: left;
       }
 
-      &__user-content p{
-        float: right;
-        padding-right: 20px;
-      }
+        &__user-btn{
+          float: right;
+          padding-right: 20px;
+          color: $white;
+        }
 
   &__groups{
     height: 85%;
