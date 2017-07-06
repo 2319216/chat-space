@@ -2,8 +2,11 @@
   .chat-side__user-content
     .chat-side__user-name
       sample
-    %p
-      <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
-      <i class="fa fa-cog" aria-hidden="true"></i>
+    .chat-side__user-btn
+      %a.chat-side__group-create
+        %i.fa.fa-pencil-square-o
+      %a.chat-side__user-config
+        = link_to edit_user_registration_path do
+          %i.fa.fa-cog
 .chat-side--groups
   = render "layouts/groups-list"
