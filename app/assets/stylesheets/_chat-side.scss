@@ -32,8 +32,15 @@
         &__user-btn{
           float: right;
           padding-right: 20px;
-          color: $white;
         }
+
+          &__user-btn a{
+            color: $white;
+          }
+
+            &__user-btn a:hover{
+              opacity: 0.5 ;
+            }
 
   &__groups{
     height: 85%;
