@@ -1,7 +1,8 @@
 .chat-side__user
   .chat-side__user-content
     .chat-side__user-name
-      sample
+      - if user_signed_in?
+        = current_user.name
     .chat-side__user-btn
       %a.chat-side__group-create
         = link_to new_group_path do

@@ -1,5 +1,5 @@
-.chat-side__groups-list
-  %li.chat-side__groupe
-    テンプレート
-    %p.chat-side__groupe-name
-      テンプレート
+%ul.chat-side__groups-list
+  - current_user.groups.each do |group|
+    %li.chat-side__group
+      %p.chat-side__group-name
+        = group.name
