@@ -1,6 +1,6 @@
 class GroupsController < ApplicationController
 
-  before_action :move_to_sign_in, except: :new
+  before_action :set_group, only: [:edit, :update]
 
   def index
     @groups = current_user.groups
@@ -20,20 +20,14 @@ class GroupsController < ApplicationController
   end
 
   def edit
-    @group = Group.find(params[:id])
   end
 
   def update
-    @group = Group.find(params[:id])
     if @group.update(group_params)
       redirect_to groups_path, notice: 'チャットグループが更新されました'
     else
       render :edit
     end
-  end
-
-  def index
-    @groups = current_user.groups
   end
 
   private
@@ -42,8 +36,8 @@ class GroupsController < ApplicationController
      params.require(:group).permit(:name, user_ids: [])
   end
 
-  def move_to_sign_in
-    redirect_to new_user_session_path unless user_signed_in?
+  def set_group
+    @group = Group.find(params[:id])
   end
 
 end
