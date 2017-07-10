@@ -36,6 +36,7 @@
 
           &__user-btn a{
             color: $white;
+            text-decoration: none;
           }
 
             &__user-btn a:hover{
@@ -43,16 +44,21 @@
             }
 
   &__groups{
-    height: 85%;
+    height: calc(100vh - 100px);
     width: 100%;
+    overflow: auto;
   }
-    &__groups-list{
-      height: 100%;
-      color: $white;
-      list-style: none;
+    &__groups a{
+      text-decoration: none;
     }
-      &__group{
-      font-style: 15px;
-      padding: 20px;
+      &__groups-list{
+        height: 100%;
+        color: $white;
+        list-style: none;
       }
+
+        &__group{
+          font-style: 15px;
+          padding: 20px;
+        }
 }
