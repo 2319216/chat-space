@@ -1,0 +1,61 @@
+.chat-main__header
+          .chat-main__header--group
+            .chat-main__header--group-name
+              = group.name
+            %a.chat-main__header--group-edit-btn{href:"/groups/#{group.id}/edit"}
+              %input{type: "submit",value: "Edit"}
+          .chat-main__header-members
+            MEMBER:
+            %i
+              matsu
+        .chat-main__body
+          .chat-main__body--messages-list
+            %li.chat-main__message
+              %p.chat-main__message-name
+                matsu
+              %p.chat-main__message-time
+                2016/10/02 06:27:07
+              %p.chat-main__message-body
+                なるほど
+            %li.chat-main__message
+              %p.chat-main__message-name
+                matsu
+              %p.chat-main__message-time
+                2016/10/02 06:27:07
+              %p.chat-main__message-body
+                なるほど
+            %li.chat-main__message
+              %p.chat-main__message-name
+                matsu
+              %p.chat-main__message-time
+                2016/10/02 06:27:07
+              %p.chat-main__message-body
+                なるほど
+            %li.chat-main__message
+              %p.chat-main__message-name
+                matsu
+              %p.chat-main__message-time
+                2016/10/02 06:27:07
+              %p.chat-main__message-body
+                なるほど
+            %li.chat-main__message
+              %p.chat-main__message-name
+                matsu
+              %p.chat-main__message-time
+                2016/10/02 06:27:07
+              %p.chat-main__message-body
+                なるほど
+            %li.chat-main__message
+              %p.chat-main__message-name
+                matsu
+              %p.chat-main__message-time
+                2016/10/02 06:27:07
+              %p.chat-main__message-body
+                なるほど
+        .chat-main__footer
+          .chat-main__footer-image
+            %i.input.fa.fa-picture-o{type: "submit"}
+          .chat-main__footer-body
+            %input{placeholder: "type a message",type: "text"}
+            .chat-main__footer-body-sentbtn
+              %input{type: "submit",value: "sent"}

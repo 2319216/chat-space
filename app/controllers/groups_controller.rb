@@ -2,6 +2,10 @@ class GroupsController < ApplicationController
 
   before_action :move_to_sign_in, except: :new
 
+  def index
+    @groups = current_user.groups
+  end
+
   def new
     @group = Group.new
   end
@@ -19,13 +23,14 @@ class GroupsController < ApplicationController
     @group = Group.find(params[:id])
   end
 
-  # def update
-  #   if @group.update(group_params)
-  #     redirect_to groups_path, notice: 'チャットグループが更新されました'
-  #   else
-  #     render :edit
-  #   end
-  # end
+  def update
+    @group = Group.find(params[:id])
+    if @group.update(group_params)
+      redirect_to groups_path, notice: 'チャットグループが更新されました'
+    else
+      render :edit
+    end
+  end
 
   def index
     @groups = current_user.groups

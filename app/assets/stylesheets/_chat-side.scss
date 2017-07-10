@@ -11,7 +11,7 @@
     position: relative;
     color: $white;
     font-size: 20px;
-    font-weight: bold;
+    
   }
     &__user-content{
       height: 50px;
@@ -50,6 +50,7 @@
   }
     &__groups a{
       text-decoration: none;
+      color: $white;
     }
       &__groups-list{
         height: 100%;
