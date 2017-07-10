@@ -1,0 +1,9 @@
+.chat-group-form
+  %h1 チャットグループ編集
+  .chat-group-form__errors
+    - if @group.errors.any?
+      %ul
+        -@group.errors.full_messages.each do |message|
+          %li
+            =message
+  = render "layouts/group-edit"

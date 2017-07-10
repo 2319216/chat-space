@@ -2,15 +2,15 @@
 %html
   %body
     .notification
-      = render "layouts/top_message"
+      = render "layouts/flash"
     .chat-side
       = render "layouts/user"
     .chat-main
       .chat-main__header
         .chat-main__header--group
           .chat-main__header--group-name
-            sampleグループ
-          .chat-main__header--group-edit-btn
+            = @group.name
+          %a.chat-main__header--group-edit-btn{href:"/groups/#{@group.id}/edit"}
             %input{type: "submit",value: "Edit"}
         .chat-main__header-members
           MEMBER:
@@ -18,41 +18,6 @@
             matsu
       .chat-main__body
         .chat-main__body--messages-list
-          %li.chat-main__message
-            %p.chat-main__message-name
-              matsu
-            %p.chat-main__message-time
-              2016/10/02 06:27:07
-            %p.chat-main__message-body
-              なるほど
-          %li.chat-main__message
-            %p.chat-main__message-name
-              matsu
-            %p.chat-main__message-time
-              2016/10/02 06:27:07
-            %p.chat-main__message-body
-              なるほど
-          %li.chat-main__message
-            %p.chat-main__message-name
-              matsu
-            %p.chat-main__message-time
-              2016/10/02 06:27:07
-            %p.chat-main__message-body
-              なるほど
-          %li.chat-main__message
-            %p.chat-main__message-name
-              matsu
-            %p.chat-main__message-time
-              2016/10/02 06:27:07
-            %p.chat-main__message-body
-              なるほど
-          %li.chat-main__message
-            %p.chat-main__message-name
-              matsu
-            %p.chat-main__message-time
-              2016/10/02 06:27:07
-            %p.chat-main__message-body
-              なるほど
           %li.chat-main__message
             %p.chat-main__message-name
               matsu

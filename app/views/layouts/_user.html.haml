@@ -1,10 +1,12 @@
 .chat-side__user
   .chat-side__user-content
     .chat-side__user-name
-      sample
+      - if user_signed_in?
+        = current_user.name
     .chat-side__user-btn
       %a.chat-side__group-create
-        %i.fa.fa-pencil-square-o
+        = link_to new_group_path do
+          %i.fa.fa-pencil-square-o
       %a.chat-side__user-config
         = link_to edit_user_registration_path do
           %i.fa.fa-cog
