@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   root to: "groups#index"
 
   resources :groups,except: [:show,:destroy] do
-    resources :messages,only: :index
+    resources :messages,only: [:index,:create]
   end
   resources :users, only: [:edit, :update]
 end
