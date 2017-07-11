@@ -2,12 +2,24 @@ class MessagesController < ApplicationController
 
   def index
     @group = Group.find(params[:group_id])
+    @messages = @group.messages.order('created_at DESC')
+    @message = Message.new
   end
 
-  def new
+  def create
+    @group = Group.find(params[:group_id])
+    @message = Message.new(create_params)
+    if @message.save
+      redirect_to group_messages_path
+    else
+      redirect_to group_messages_path, notice: "メッセージを入力してください"
+    end
   end
 
-  def edit
+  private
+
+  def create_params
+    params.require(:message).permit(:message,:image).merge(user_id: current_user.id,group_id: params[:group_id])
   end
 
 end

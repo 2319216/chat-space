@@ -38,30 +38,26 @@
     height: calc( 100vh - 15% - 90px );
     overflow-y: scroll;
   }
-    &__body--messages-list{
-      padding: 46px 0 40px 40px;
-      list-style: none;
+    &__message{
+      padding: 20px;
     }
-      &__message{
-        padding: 20px;
+      &__message-name{
+        font-size: 16px;
+        font-weight: bold;
+        float: left;
+        color: $navy;
       }
-        &__message-name{
-          font-size: 16px;
-          font-weight: bold;
-          float: left;
-          color: $navy;
-        }
-        &__message-time{
-          padding: 0 10px 10px;
-          font-size: 12px;
-          margin-left: 10px;
-          float: left;
-        }
-        &__message-body{
-          font-size: 14px;
-          color: $navy;
-          clear: both;
-        }
+      &__message-time{
+        padding: 0 10px 10px;
+        font-size: 12px;
+        margin-left: 10px;
+        float: left;
+      }
+      &__message-body{
+        font-size: 14px;
+        color: $navy;
+        clear: both;
+      }
 
   &__footer{
     height: 90px;
