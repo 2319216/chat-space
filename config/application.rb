@@ -17,5 +17,7 @@ module ChatSpace
       g.helper false
       g.test_framework false
     end
+    config.time_zone = 'Asia/Tokyo'
+    config.active_record.default_timezone = :local
   end
 end
