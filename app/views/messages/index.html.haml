@@ -13,13 +13,13 @@
         .chat-main__header-members
           MEMBER:
           %i
-            matsu
+            = @group.users.name
       .chat-main__body
         .chat-main__body--messages-list
-        - @messages.each do |message|
+        - @group.messages.each do |message|
           %li.chat-main__message
             %p.chat-main__message-name
-              matsu
+              = message.user.name
             %p.chat-main__message-time
               = message.created_at
             %p.chat-main__message-body
@@ -31,6 +31,6 @@
             .chat-main__footer-body-sentbtn
               = f.submit "send", data: { disable_with: '更新中...' }
           .chat-main__footer-image
-            = f.file_field :image
-            %i.input.fa.fa-picture-o
-
+            = f.label :image do
+              %i.fa.fa-picture-o
+                = f.file_field :image
