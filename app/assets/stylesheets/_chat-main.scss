@@ -40,6 +40,7 @@
   }
     &__message{
       padding: 20px;
+      list-style: none;
     }
       &__message-name{
         font-size: 16px;
@@ -83,6 +84,7 @@
         &__footer-image input{
           line-height: 50px;
           margin: 0 auto;
+          display: none;
         }
       &__footer-body input{
         height: 50px;

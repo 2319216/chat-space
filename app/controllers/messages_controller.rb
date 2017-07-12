@@ -1,6 +1,6 @@
 class MessagesController < ApplicationController
 
-  before_action :set_action, only: [:index, :create]
+  before_action :set_group, only: [:index, :create]
 
   def index
     @messages = @group.messages.order('created_at DESC')
@@ -22,7 +22,7 @@ class MessagesController < ApplicationController
     params.require(:message).permit(:message,:image).merge(user_id: current_user.id,group_id: params[:group_id])
   end
 
-  def set_action
+  def set_group
     @group = Group.find(params[:group_id])
   end
 

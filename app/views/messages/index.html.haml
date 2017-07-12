@@ -24,6 +24,7 @@
               = message.created_at
             %p.chat-main__message-body
               = message.message
+              = image_tag message.image.thumb
       .chat-main__footer
         =form_for [@group,@message] do |f|
           .chat-main__footer-body
@@ -33,4 +34,4 @@
           .chat-main__footer-image
             = f.label :image do
               %i.fa.fa-picture-o
-                = f.file_field :image
+            = f.file_field :image
