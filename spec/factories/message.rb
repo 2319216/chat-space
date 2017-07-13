@@ -7,5 +7,5 @@ FactoryGirl.define do
     image File.open(File.join(Rails.root, '/spec/fixtures/Manchester-city.jpg'))
 
   end
-
 end
+
