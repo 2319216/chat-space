@@ -7,7 +7,7 @@ class Message < ApplicationRecord
 
   private
     def message_or_image
-      message.presence or image.presence
+      message.present? || image.present?
     end
 
 end
