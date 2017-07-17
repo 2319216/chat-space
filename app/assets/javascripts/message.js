@@ -1,6 +1,6 @@
 $(function(){
   function buildHTML(message){
-    var addImage  = (message.image !== null) ? `<img src=${message.image.url}>` : ``;
+    var addImage  = (message.image.url !== null) ? `<img src=${message.image.url}>` : ``;
     var html = `
     <ul>
       <li class="chat-main__message">
@@ -30,6 +30,7 @@ $(function(){
       var html = buildHTML(data);
       $('.chat-main__body').append(html)
       $('.chat-main__message-send').val('')
+      $("#message_image").val("")
       $('.chat-main__body').animate({scrollTop: $('.chat-main__body')[0].scrollHeight});
     })
     .fail(function(){
@@ -37,4 +38,17 @@ $(function(){
     })
     return false
   })
+});
+
+
+
+$(function flash() {
+  {var html =
+  $('.notification').append(html);
+  $('.notification-alert').fadeIn(500).fadeOut(2000);
+  setTimeout(function(){
+   $('.notification-alert').remove();
+  },2500);
+}
+  return false
 });
