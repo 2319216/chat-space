@@ -26,7 +26,6 @@ $(function() {
     $(document).on('keyup', '#user-search-field', function(e){
       e.preventDefault();
       var input = $.trim($(this).val());
-      // console.log(input)
       $.ajax({
         url: '/users/search',
         type: 'GET',
@@ -36,7 +35,6 @@ $(function() {
         dataType: 'json'
       })
       .done(function(data){
-        // console.log(data)
         $('#result').find('li').remove();
         $(data).each(function(i, user){
           var html = buildUSER(user);
