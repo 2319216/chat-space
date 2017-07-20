@@ -38,24 +38,39 @@ $(function(){
   setInterval(reload, 5000)
   function reload(){
     var current_url = document.location.pathname;
+    console.log(current_url);
     $.ajax({
       type: 'GET',
       url: current_url,
       dataType: 'json'
     })
     .done(function(messages){
-      var message_size = $('.chat-main__body--messages-list li').length;
+      var message_size = $('.chat-main__body--messages-list ul li').length;
+      console.log(message_size);
+      console.log(JSON.stringify(messages));
       if (message_size !== messages.length){
         messages.forEach(function(message){
-          console.log(message);
+          // console.log(message);
         html = buildHTML(message);
       });
-      $('.chat-main__body--messages-list').append(html)
+      $('.chat-main__message-ul').append(html);
       $('.chat-main__body').animate({scrollTop: $('.chat-main__body')[0].scrollHeight});
       }
     })
   }
 });
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
