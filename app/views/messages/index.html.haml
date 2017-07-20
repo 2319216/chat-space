@@ -1,39 +1,36 @@
-!!!
-%html
-  %body
-    .wrapper
-      .chat-side
-        = render "layouts/user"
-      .chat-main
-        .chat-main__header
-          .chat-main__header--group
-            .chat-main__header--group-name
-              = @group.name
-            %a.chat-main__header--group-edit-btn{href:"/groups/#{@group.id}/edit"}
-              %input{type: "submit",value: "Edit"}
-          .chat-main__header-members
-            MEMBER:
-            %i
-              = @group.users.name
-        .chat-main__body
-          .chat-main__body--messages-list
+.wrapper
+  .chat-side
+    = render "layouts/user"
+  .chat-main
+    .chat-main__header
+      .chat-main__header--group
+        .chat-main__header--group-name
+          = @group.name
+        %a.chat-main__header--group-edit-btn{href:"/groups/#{@group.id}/edit"}
+          %input{type: "submit",value: "Edit"}
+      .chat-main__header-members
+        MEMBER:
+        %i
+          = @group.users.name
+    .chat-main__body
+      .chat-main__body--messages-list
+        %ul.chat-main__message-ul
           - @group.messages.each do |message|
-            %ul
-              %li.chat-main__message
-                %p.chat-main__message-name
-                  = message.user.name
-                %p.chat-main__message-time
-                  = message.created_at
-                %p.chat-main__message-body
-                  = message.message
-                  = image_tag message.image.thumb
-        .chat-main__footer
-          =form_for [@group,@message] do |f|
-            .chat-main__footer-body
-              = f.text_field :message, placeholder: "  type a message", class: "chat-main__message-send"
-              .chat-main__footer-body-sentbtn
-                = f.submit "send", data: { disable_with: '更新中...' }
-            .chat-main__footer-image
-              = f.label :image do
-                %i.fa.fa-picture-o
-              = f.file_field :image
+            %li.chat-main__message
+              %p.chat-main__message-name
+                = message.user.name
+              %p.chat-main__message-time
+                = message.created_at
+              %p.chat-main__message-body
+                = message.message
+                = image_tag message.image.thumb
+    .chat-main__footer
+      =form_for [@group,@message] do |f|
+        .chat-main__footer-body
+          = f.text_field :message, placeholder: "  type a message", class: "chat-main__message-send"
+          .chat-main__footer-body-sentbtn
+            = f.submit "send", data: { disable_with: '更新中...' }
+        .chat-main__footer-image
+          = f.label :image do
+            %i.fa.fa-picture-o
+          = f.file_field :image

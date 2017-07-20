@@ -59,6 +59,9 @@
     &__field--right {
       float: right;
       width: 70%;
+      padding: 0 15px;
+      font-size: 14px;
+      line-height: 50px;
     }
 
     &__label {
@@ -82,6 +85,7 @@
     line-height: 50px;
     font-size: 14px;
     border-bottom: 1px solid #ddd;
+    list-style: none;
     &:after {
       content: "";
       clear: both;
@@ -115,3 +119,19 @@
     border: 0;
   }
 }
+
+.chat-group-form__field--right{
+    padding: 0 15px;
+    line-height: 50px;
+    font-size: 14px;
+    border-bottom: 1px solid #ddd;
+    list-style: none;
+}
+
+.chat-group-form__input {
+      float: left;
+      width: 100%;
+      line-height: 30px;
+      padding: 10px 15px;
+      box-sizing: border-box;
+    }
