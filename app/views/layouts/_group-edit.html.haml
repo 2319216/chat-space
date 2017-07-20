@@ -15,10 +15,11 @@
 
   .chat-group-form__field.clearfix
     .chat-group-form__field--left
-      = current_user.name
       = f.label :name, "チャットメンバー", class: "chat-group-form__label"
     .chat-group-form__field--right
       #chat-group-users
+      = current_user.name
+      %ul.result-list
   #chat-group-user-22.chat-group-user.clearfix
     %input{name: "chat_group[user_ids][]", type: "hidden", value: "22"}/
 
@@ -26,4 +27,4 @@
   .chat-group-form__field.clearfix
     .chat-group-form__field--left
     .chat-group-form__field--right
-      = f.submit "Save", class: "chat-group-form__action-btn"
+      = f.submit "Save", class: "chat-group-form__action-btn", url: "/groups/new"

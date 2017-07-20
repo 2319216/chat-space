@@ -27,7 +27,7 @@ $(function() {
       e.preventDefault();
       var input = $.trim($(this).val());
       $.ajax({
-        url: '/users/search',
+        url: '/users',
         type: 'GET',
         data: ('keyword=' + input),
         dataType: 'json'

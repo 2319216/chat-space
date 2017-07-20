@@ -1,5 +1,12 @@
 class UsersController < ApplicationController
 
+  def index
+    @users = User.search_by_name(params[:keyword], current_user)
+    #.where('name LIKE(?)', "%#{params[:keyword]}%")
+
+    render json: @users
+  end
+
   def edit
     @user = User.find(params[:id])
   end
@@ -13,10 +20,9 @@ class UsersController < ApplicationController
     end
   end
 
-  def search
-    @users = User.where('name LIKE(?)', "%#{params[:keyword]}%")
-    render json: @users
-  end
+  #def search
+
+  #end
 
   private
   def user_params
