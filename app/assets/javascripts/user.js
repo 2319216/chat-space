@@ -30,8 +30,6 @@ $(function() {
         url: '/users/search',
         type: 'GET',
         data: ('keyword=' + input),
-        processData: false,
-        contentType: false,
         dataType: 'json'
       })
       .done(function(data){
